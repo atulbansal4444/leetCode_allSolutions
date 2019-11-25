@@ -1,5 +1,4 @@
 //27. Remove Element
-
 class Solution {
     public int removeElement(int[] nums, int val) {
         int j=0;
@@ -12,4 +11,4 @@ class Solution {
         }
         return j;
     }
-}ja
+}
