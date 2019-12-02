@@ -3,15 +3,15 @@
 class Solution {
     public int lengthOfLastWord(String s) {
         int c=0;
-        int i=s.length()-1;
-        while(i>=0 && s.charAt(i) == ' ')
+        int j=s.length()-1;
+        while(j>=0 && s.charAt(j) == ' ')
         {
-            i--;
+            j--;
         }
-        while(i>=0 && s.charAt(i) != ' ')
+        while(j>=0 && s.charAt(j) != ' ')
         {
             c++;
-            i--;
+            j--;
         }
         return c;
     }
