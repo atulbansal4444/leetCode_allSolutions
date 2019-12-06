@@ -1,0 +1,25 @@
+//83. Remove Duplicates from Sorted List
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        ListNode start = head;
+        if(head == null || head.next == null) return head;
+        while(start != null)
+        {
+            while(start.next != null && start.val == start.next.val)
+            {
+                start.next = start.next.next;
+            }
+            start = start.next;
+        }
+        return head;
+    }
+}
